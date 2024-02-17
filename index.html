@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alphabet-clash-pro</title>
     <!-- daisyui and tailwind -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.0/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,18 +18,18 @@
 <body class="font-poppins">
     <main class="min-h-screen bg-no-repeat bg-center bg-[#010313] bg-[url(./images/background.png)]">
         <!-- home screen -->
-        <section class="home min-h-screen text-white flex justify-center items-center hidden">
+        <section id="home-screen" class="home min-h-screen text-white flex justify-center items-center">
            <div class="flex flex-col items-center gap-10">
             <h1 class="text-8xl text-center font-anton uppercase ">ALPHABET CLASH</h1>
             <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
-            <button class="btn bg-white text-black"> Paly Now </button>
+            <button onclick="play()" class="btn bg-white text-black" > Paly Now </button>
            </div>
 
            
         </section>
 
         <!-- playground start -->
-        <section class="play-ground">
+        <section id="play-ground" class="hidden">
             <div class="flex flex-col items-center gap-20 pt-20">
                 <!--Screen  -->
                 <div class="artboard artboard-horizontal phone-6 border-[20px] rounded-2xl border-[#010313CC] bg-[#FFFFFFB3]">
@@ -83,12 +83,12 @@
                     <button class="btn rounded-full bg-[#894189] text-white px-8">
                         life
                         <img src="./images/life.svg" alt="">
-                        <span>1</span>
+                        <span>5</span>
                     </button>
                     <button class="btn rounded-full bg-[#360490] text-white px-8">
                         Score
                         <img src="./images/score.svg" alt="">
-                        <span>1</span>
+                        <span>0</span>
                     </button>
                     
                 </div>
@@ -97,11 +97,24 @@
         </section>
 
         <!-- Playground -->
-        <section class="score">
-
+        <section class="score hidden flex justify-center items-center min-h-screen ">
+            <div class="text-white bg-[#FFFFFF33] text-center space-y-10 p-4 pt-8 pb-8 rounded-lg">
+                <h1 class="text-8xl ">
+                    <span class="font-extrabold">Socre : </span>
+                    <span>0</span>
+                </h1>
+                <button class="btn">Play Again</button>
+                <p class="text-2xl">Practice will make you Pro</p>
+            </div>
         </section>
     </main>
 
+    <script src="./scripts/utilities.js"></script>
+    <script src="./scripts/scripts.js"></script>
 </body>
 
 </html>
+
+
+<!--Done : 27-4 Design PlayGround Screen, Life And Score
+-->
